@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f172a;
+  color: white;
+}
+
+.navbar {
+  background: #111827;
+  padding: 15px;
+  text-align: center;
+  color: #f97316;
+}
+
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.hero h2 {
+  font-size: 28px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  background: #f97316;
+  padding: 12px 20px;
+  margin: 5px;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border-radius: 6px;
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid #f97316;
+}
+
+.btn.big {
+  display: block;
+  margin: 10px auto;
+  width: 80%;
+}
+
+.quote-card {
+  background: white;
+  color: black;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.quote-card input,
+.quote-card textarea,
+.quote-card select {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+}
+
+.services {
+  padding: 30px 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.card {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.why {
+  background: #020617;
+  padding: 30px 20px;
+}
+
+.why-box p {
+  margin: 10px 0;
+}
+
+.gallery {
+  padding: 30px 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.testimonials {
+  padding: 30px 20px;
+}
+
+.testimonial {
+  background: #1f2937;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.cta {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer {
+  background: #000;
+  text-align: center;
+  padding: 20px;
+}
