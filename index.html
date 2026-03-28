@@ -3,99 +3,226 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jozcon Construction</title>
-<link rel="stylesheet" href="style.css">
+<title>Jozcon</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #111;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+/* LOADER */
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.loader-text {
+    color: orange;
+    font-size: 20px;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #1a1a1a;
+    position: sticky;
+    top: 0;
+}
+
+.logo { color: orange; font-weight: bold; }
+
+.menu { cursor: pointer; font-size: 24px; }
+
+.menu-links {
+    display: none;
+    flex-direction: column;
+    background: #1a1a1a;
+    padding: 10px;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+/* HERO */
+.hero img {
+    width: 100%;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+
+/* SECTIONS */
+.section { padding: 20px; }
+
+.card {
+    background: #1a1a1a;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* BUTTON */
+.btn {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background: orange;
+    color: black;
+    border-radius: 12px;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+/* GALLERY */
+.gallery {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+}
+
+.gallery img {
+    width: 250px;
+    border-radius: 15px;
+}
+
+/* FORM */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+}
+</style>
+
 </head>
 
 <body>
 
-<header class="navbar">
-  <h1>JOZCON</h1>
-</header>
+<div id="loader">
+    <div class="loader-text">Loading Jozcon...</div>
+</div>
 
-<section class="hero">
-  <h2>QUALITY CONSTRUCTION YOU CAN TRUST</h2>
-  <p>From tiling to full renovations — clean finishes, durable results.</p>
-  <div class="buttons">
-    <a href="tel:+27815566322" class="btn">Call Now</a>
-    <a href="https://wa.me/27815566322" class="btn outline">WhatsApp</a>
-  </div>
-</section>
+<nav>
+    <div class="logo">JOZCON</div>
+    <div class="menu" onclick="toggleMenu()">鈽�</div>
+</nav>
 
-<section class="quote-card">
-  <h3>Get a Free Quote</h3>
-  <input placeholder="Your Name">
-  <input placeholder="Phone Number">
-  <select>
-    <option>Select a Service</option>
-    <option>Tiling</option>
-    <option>Paving</option>
-  </select>
-  <textarea placeholder="Tell us about your project..."></textarea>
-  <button>Request Quote via WhatsApp</button>
-</section>
+<div class="menu-links" id="menu">
+    <a href="#home">Home</a>
+    <a href="#gallery">Projects</a>
+    <a href="#contact">Contact</a>
+</div>
 
-<section class="services">
-  <h3>Our Services</h3>
-  <div class="cards">
+<div class="section" id="home">
 
-    <div class="card">Tiling</div>
-    <div class="card">Paving</div>
-    <div class="card">Building</div>
-    <div class="card">Painting</div>
-    <div class="card">Concrete Work</div>
-    <div class="card">Plastering</div>
-    <div class="card">Renovations</div>
+    <div class="hero">
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+    </div>
 
-  </div>
-</section>
+    <div class="card">
+        <h2>Premium Construction Services</h2>
+        <p>Trusted experts in Gauteng delivering high-quality work for over 16 years.</p>
+        <a class="btn" href="https://wa.me/27815566322">Get a Quote</a>
+    </div>
 
-<section class="why">
-  <h3>Built on Trust & Quality</h3>
+</div>
 
-  <div class="why-box">
-    <p>✔ Experienced craftsmen</p>
-    <p>✔ Affordable pricing</p>
-    <p>✔ On-time delivery</p>
-    <p>✔ Clean & professional</p>
-  </div>
-</section>
+<div class="section" id="gallery">
 
-<section class="gallery">
-  <h3>Project Gallery</h3>
-  <div class="gallery-grid">
-    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
-    <img src="https://images.unsplash.com/photo-1599423300746-b62533397364">
-    <img src="https://images.unsplash.com/photo-1581091215367-59ab6b1f4d1c">
-  </div>
-</section>
+    <div class="card">
+        <h2>Our Projects</h2>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
+            <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
+            <img src="https://images.unsplash.com/photo-1591588582259-e675bd2e6088">
+        </div>
+    </div>
 
-<section class="testimonials">
-  <h3>What Our Clients Say</h3>
+</div>
 
-  <div class="testimonial">
-    ⭐⭐⭐⭐⭐<br>
-    "Clean work and fast service. Highly recommend!"
-  </div>
+<div class="section" id="contact">
 
-  <div class="testimonial">
-    ⭐⭐⭐⭐⭐<br>
-    "Affordable and professional team."
-  </div>
+    <div class="card">
+        <h3>馃搷 Randburg</h3>
+        <p>Available for meet-ups and projects</p>
+    </div>
 
-</section>
+    <div class="card">
+        <h3>馃摓 Contact</h3>
+        <p>+27 81 556 6322</p>
+        <p>+27 76 667 2768</p>
+        <a class="btn" href="https://wa.me/27815566322">WhatsApp</a>
+    </div>
 
-<section class="cta">
-  <h3>Ready to Build?</h3>
-  <p>Call or WhatsApp us today</p>
+    <div class="card">
+        <h3>Send a Request</h3>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <a class="btn">Submit</a>
+    </div>
 
-  <a href="tel:+27815566322" class="btn big">+27 81 556 6322</a>
-  <a href="https://wa.me/27815566322" class="btn outline big">WhatsApp</a>
-</section>
+</div>
 
-<footer>
-  <p>© 2026 Jozcon Company</p>
-</footer>
+<a class="whatsapp" href="https://wa.me/27815566322">馃挰</a>
+
+<script>
+// MENU
+function toggleMenu() {
+    let menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+
+// SCROLL ANIMATION
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+    cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if (top < window.innerHeight - 50) {
+            card.classList.add('show');
+        }
+    });
+});
+
+// LOADER
+window.onload = () => {
+    document.getElementById("loader").style.display = "none";
+};
+</script>
 
 </body>
 </html>
